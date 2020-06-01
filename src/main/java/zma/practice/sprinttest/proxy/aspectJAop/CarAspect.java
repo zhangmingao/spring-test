@@ -39,11 +39,27 @@ public class CarAspect {
     System.out.println("代理 afterReturning：" + result);
   }
 
-  @AfterThrowing(value = "carTurnLeftPoint()", throwing = "e")
-  public void afterThrowing(Exception e) {
-    System.out.println("代理 afterThrowing: 发生了异常" + e.getMessage());
-    e.printStackTrace();
-  }
+
+//  @Before(value = "carTurnLeftPoint()")
+//  public void beforeMethod() {
+//    System.out.println("代理：汽车要启动了");
+//  }
+//
+//  @After(value = "carTurnLeftPoint()")
+//  public void afterMethod() {
+//    System.out.println("代理 afterMethod：汽车跑完了");
+//  }
+//
+//  @AfterReturning(value = "carTurnLeftPoint()", returning="result")
+//  public void afterReturning(Object result) {
+//    System.out.println("代理 afterReturning：" + result);
+//  }
+//
+//  @AfterThrowing(value = "carTurnLeftPoint()", throwing = "e")
+//  public void afterThrowing(Exception e) {
+//    System.out.println("代理 afterThrowing: 发生了异常" + e.getMessage());
+//    e.printStackTrace();
+//  }
 
   @Around(value = "carPoint()")
   public String around() {

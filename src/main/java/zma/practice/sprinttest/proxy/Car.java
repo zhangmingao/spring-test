@@ -3,7 +3,7 @@ package zma.practice.sprinttest.proxy;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Car {
+public class Car implements WheelThings {
 
   public String run() {
     System.out.println("小汽车跑啊跑");
