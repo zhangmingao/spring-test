@@ -1,0 +1,41 @@
+
+server:
+  port: 8082
+  servlet:
+    session:
+      timeout: 30ms
+spring:
+  cache:
+    type: redis
+  redis:
+    host: 192.168.0.172
+    port: 6379
+    timeout: 2500
+    password: xKoCjLDdPjT96z5q
+    database: 15
+
+#    host: 127.0.0.1
+#    port: 6379
+#    password:
+#    # redisĬ���������16����Ƭ���������þ���ʹ�õķ�Ƭ��Ĭ��Ϊ0
+#    database: 0
+#    lettuce:
+#      pool:
+#        # ���ӳ����������(ʹ�ø�����ʾû������),Ĭ��8
+#        max-active: 100
+  kafka:
+    bootstrap-servers: 192.168.0.206:9092
+    producer:
+      retries: 3
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: ecmKafkaTest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-commit-interval: 100
+      enable-auto-commit: true
+      heartbeat-interval: 2000
+
+logging:
+  config: classpath:logback-spring-devv.xml
