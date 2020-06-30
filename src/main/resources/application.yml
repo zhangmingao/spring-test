@@ -13,6 +13,10 @@ spring:
     timeout: 2500
     password: xKoCjLDdPjT96z5q
     database: 15
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/my_test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&allowMultiQueries=true
 
 #    host: 127.0.0.1
 #    port: 6379
@@ -38,4 +42,8 @@ spring:
       heartbeat-interval: 2000
 
 logging:
-  config: classpath:logback-spring-devv.xml
+  config: classpath:logback-spring-dev.xml
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*Mapper.xml

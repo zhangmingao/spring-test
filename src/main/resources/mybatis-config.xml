@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <plugins>
+        <!-- 通用Maper -->
+		<plugin interceptor="zma.practice.sprinttest.mybatisTest.QueryPlugin">
+		</plugin>
+        <plugin interceptor="zma.practice.sprinttest.mybatisTest.QueryPlugin2">
+        </plugin>
+	</plugins>
+</configuration>
